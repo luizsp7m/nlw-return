@@ -11,10 +11,14 @@ module.exports = {
           500: "#8257e2",
         },
 
-        borderRadius: {
-          md: "4px",
+        dark_secondary: {
+          500: "#252A34",
         },
-      }
+      },
+
+      borderRadius: {
+        md: "4px",
+      },
     },
   },
   plugins: [
