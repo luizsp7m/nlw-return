@@ -10,14 +10,14 @@ module.exports = {
           300: "#996dff",
           500: "#8257e2",
         },
-
-        dark_secondary: {
-          500: "#252A34",
-        },
       },
 
       borderRadius: {
         md: "4px",
+      },
+
+      fontFamily: {
+        "poppins": ["Poppins", "sans-serif"]
       },
     },
   },
