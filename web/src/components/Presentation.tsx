@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { RiDownloadLine } from "react-icons/ri";
+import { BsMoon } from "react-icons/bs";
 
 const SOCIAL = {
   GITHUB: {
@@ -37,8 +38,12 @@ const ACHIEVEMENTS = {
 
 export function Presentation() {
   return (
-    <div className="flex flex-col justify-center items-center gap-6 mt-20 mb-10">
-      <div className="w-40 h-40 flex justify-center items-center rounded-full bg-slate-200">
+    <div className="w-full relative flex flex-col justify-center items-center gap-6 mt-20 mb-10">
+      <button className="absolute right-0 top-0">
+        <BsMoon size={20} className="text-slate-400" />
+      </button>
+
+      <div className="w-40 h-40 flex justify-center items-center rounded-full bg-slate-200 dark:bg-slate-800">
         <img
           src="https://github.com/luizsp7m.png"
           alt="Foto"
@@ -47,7 +52,7 @@ export function Presentation() {
       </div>
 
       <div className="flex flex-col items-center gap-2">
-        <h1 className="font-bold text-xl text-slate-500">Luiz Oliveira</h1>
+        <h1 className="font-bold text-xl text-slate-50">Luiz Oliveira</h1>
         <span className="font-normal text-sm">Web developer</span>
       </div>
 
@@ -57,7 +62,7 @@ export function Presentation() {
             key={key}
             href={value.link}
             target="_blank"
-            className="h-10 w-10 rounded-md flex items-center justify-center bg-slate-200 text-slate-50 transition-colors duration-300 hover:bg-slate-300"
+            className="h-10 w-10 rounded-md flex items-center justify-center bg-slate-200 dark:bg-slate-800 text-slate-50 dark:text-slate-200 transition-colors duration-300 hover:bg-slate-300 hover:dark:bg-slate-700"
           >
             {value.icon}
           </a>
@@ -67,7 +72,7 @@ export function Presentation() {
       <div className="flex flex-wrap justify-center items-center my-4 gap-16">
         {Object.entries(ACHIEVEMENTS).map(([key, value]) => (
           <div className="flex flex-col items-center gap-2 w-[4rem] text-center">
-            <h5 className="font-bold text-lg text-slate-500">{value.amount}</h5>
+            <h5 className="font-bold text-lg text-slate-500 dark:text-slate-50">{value.amount}</h5>
             <span className="text-sm">{value.title}</span>
           </div>
         ))}

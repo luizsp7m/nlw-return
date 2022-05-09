@@ -17,7 +17,7 @@ export function FeedbackTypeStep({ onFeedbackTypeChanged }: FeedbackTypeStepProp
         {Object.entries(feedbackTypes).map(([key, value]) => {
           return (
             <button
-              className="bg-gray-200 rounded-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent hover:border-sky-400 focus:border-sky-400 focus:outline-none"
+              className="bg-gray-200 dark:bg-slate-600 rounded-lg py-5 w-24 flex-1 flex flex-col items-center gap-2 border-2 border-transparent hover:border-sky-400 focus:border-sky-400 focus:outline-none"
               type="button"
               onClick={() => onFeedbackTypeChanged(key as FeedbackType)}
               key={key}

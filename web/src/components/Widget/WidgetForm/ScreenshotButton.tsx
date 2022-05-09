@@ -42,7 +42,7 @@ export function ScreenshotButton({ onScreenshotTook, screenshot }: ScreenshotBut
   return (
     <button
       type="button"
-      className="p-2 rounded-md border-transparent bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-sky-400"
+      className="p-2 rounded-md border-transparent bg-gray-400 dark:bg-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-50 focus:ring-sky-400"
       onClick={handleTakeScreenshot}
     >
       {isTakingScreenshot ? <Loading /> : <Camera className="w-6 h-6 text-zinc-100" />}
