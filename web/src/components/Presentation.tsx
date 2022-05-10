@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { RiDownloadLine } from "react-icons/ri";
 import { BsMoon } from "react-icons/bs";
+import { ThemeToggle } from "./ThemeToggle";
 
 const SOCIAL = {
   GITHUB: {
@@ -40,7 +41,7 @@ export function Presentation() {
   return (
     <div className="w-full relative flex flex-col justify-center items-center gap-6 mt-20 mb-10">
       <button className="absolute right-0 top-0">
-        <BsMoon size={20} className="text-slate-400" />
+        <ThemeToggle />
       </button>
 
       <div className="w-40 h-40 flex justify-center items-center rounded-full bg-slate-200 dark:bg-slate-800">
@@ -71,7 +72,7 @@ export function Presentation() {
 
       <div className="flex flex-wrap justify-center items-center my-4 gap-16">
         {Object.entries(ACHIEVEMENTS).map(([key, value]) => (
-          <div className="flex flex-col items-center gap-2 w-[4rem] text-center">
+          <div key={key} className="flex flex-col items-center gap-2 w-[4rem] text-center">
             <h5 className="font-bold text-lg text-slate-500 dark:text-slate-50">{value.amount}</h5>
             <span className="text-sm">{value.title}</span>
           </div>
