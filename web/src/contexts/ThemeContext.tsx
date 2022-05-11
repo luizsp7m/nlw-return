@@ -7,52 +7,39 @@ interface ThemeContextData {
 
 interface ThemeProviderProps {
   children: ReactNode;
-  initialTheme?: string;
 }
 
 function getInitialTheme() {
-  if (typeof window !== "undefined" && window.localStorage) {
-    const storedPrefs = window.localStorage.getItem("color-theme");
+  const themeStorage = window.localStorage.getItem("color-theme");
 
-    if (typeof storedPrefs === 'string') {
-      return storedPrefs;
-    }
-
-    const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
-
-    if (userMedia.matches) {
-      return "dark";
-    }
-
-    return "light";
+  if (!themeStorage) {
+    return "dark";
   }
+
+  return themeStorage;
 }
 
 const ThemeContext = createContext({} as ThemeContextData);
 
-export function ThemeProvider({ initialTheme = undefined, children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState(getInitialTheme);
+export function ThemeProvider({ children }: ThemeProviderProps) {
+  const [theme, setTheme] = useState<string>(getInitialTheme);
 
   function toggleTheme(value: string) {
     setTheme(value);
   }
 
-  function rawSetTheme(rawTheme: string) {
+  function onToggleTheme(value: string) {
     const root = window.document.documentElement;
-    const isDark = rawTheme === 'dark';
+    const isDark = value === "dark";
 
-    root.classList.remove(isDark ? 'light' : 'dark');
-    root.classList.add(rawTheme);
+    root.classList.remove(isDark ? "light" : "dark");
+    root.classList.add(value);
 
-    localStorage.setItem('color-theme', rawTheme);
-  }
-
-  if (initialTheme) {
-    rawSetTheme(initialTheme);
+    localStorage.setItem("color-theme", value);
   }
 
   useEffect(() => {
-    rawSetTheme(theme as string);
+    onToggleTheme(theme);
   }, [theme]);
 
   return (

@@ -53,7 +53,7 @@ export function Presentation() {
       </div>
 
       <div className="flex flex-col items-center gap-2">
-        <h1 className="font-bold text-xl text-slate-50">Luiz Oliveira</h1>
+        <h1 className="font-bold text-xl text-slate-500 dark:text-slate-50">Luiz Oliveira</h1>
         <span className="font-normal text-sm">Web developer</span>
       </div>
 
@@ -79,7 +79,12 @@ export function Presentation() {
         ))}
       </div>
 
-      <button className="flex items-center justify-center gap-3 py-4 px-8 rounded bg-sky-400 text-slate-50 transition-colors hover:bg-sky-500">Download CV <RiDownloadLine size={20} /></button>
+      <a
+        target="_blank"
+        href="https://drive.google.com/file/d/188rybEPr3L0WTgz8laEmRd0yohg1yuSU/view?usp=sharing"
+        className="flex items-center justify-center gap-3 py-4 px-8 rounded bg-sky-400 text-slate-50 transition-colors hover:bg-sky-500"
+      >Download CV <RiDownloadLine size={20} />
+      </a>
     </div>
   );
 }

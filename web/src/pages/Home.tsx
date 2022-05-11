@@ -70,8 +70,6 @@ export function Home() {
         <Skills />
       )}
 
-
-
       <Widget />
     </div>
   );
