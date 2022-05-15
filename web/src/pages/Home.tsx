@@ -57,7 +57,7 @@ export function Home() {
 
       <div className="flex flex-wrap justify-center gap-2 bg-slate-200 p-3 rounded-lg dark:bg-slate-800">
         <button onClick={() => setToggle("projects")} className={`h-12 w-32 ${toggle === "projects" && "bg-slate-50 dark:bg-slate-700"} rounded-lg font-medium transition-colors hover:bg-slate-50 hover:dark:bg-slate-700`}>Projects</button>
-        <button onClick={() => setToggle("skills")} className={`h-12 w-32 ${toggle === "skills" && "bg-slate-50 dark:bg-slate-700"} rounded-lg font-medium transition-colors hover:bg-slate-50 hover:dark:bg-slate-700`}>Skill</button>
+        <button onClick={() => setToggle("skills")} className={`h-12 w-32 ${toggle === "skills" && "bg-slate-50 dark:bg-slate-700"} rounded-lg font-medium transition-colors hover:bg-slate-50 hover:dark:bg-slate-700`}>Skills</button>
       </div>
 
       {toggle === "projects" ? (
