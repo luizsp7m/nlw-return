@@ -2,7 +2,7 @@
 
 Projeto desenvolvido durante a NLW da Rocketseat. Nessa edição desenvolvemos uma aplicação completa (backend, frontend e mobile) onde o usuário é capaz de enviar feedbacks. Após a conclusão dos conteúdos da semana, aproveitei para praticar um pouco de TailwindCSS e criei um mini portfólio pessoal com alguns projetos e habilidades que eu possuo
 
-![](./web/public/assets/desktop-preview.png)
+![](./web/public/images/desktop-preview.png)
 
 ### Tecnologias
 - React
